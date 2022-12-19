@@ -2,12 +2,18 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
+// logo
+import logo from '../../assets/logo/landing-96.png'
+
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="logo">Logo</div>
+        <div className="logo">
+          <img src={logo} alt="landing page logo"/>
+          <span className="logo-text">Landing Page</span>
+        </div>
         <div
           className="ham-icon"
           onClick={() => (showMenu ? setShowMenu(false) : setShowMenu(true))}
